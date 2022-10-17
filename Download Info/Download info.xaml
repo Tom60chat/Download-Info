@@ -1,0 +1,31 @@
+﻿<Page x:Class="Download_Info.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Download_Info"
+      mc:Ignorable="d" 
+      d:DesignHeight="220" d:DesignWidth="400"
+      Title="Page1" Width="Auto" Height="Auto">
+
+    <Grid>
+        <TextBlock x:Name="TextDownloading" Height="20" Margin="10,10,10,0" TextWrapping="NoWrap" Text="Downloading: Unknown" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+        <TextBlock x:Name="TextSize" HorizontalAlignment="Left" Height="20" Margin="10,30,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"><Run Text="F"/><Run Text="inal"/><Run Text="/"/><Run Text="A"/><Run Text="ctual size:"/></TextBlock>
+        <StackPanel Height="20" Margin="10,50.5,10,0" VerticalAlignment="Top" Orientation="Horizontal">
+            <TextBlock x:Name="ActualSize_Text" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFD1D1D1" Margin="0,0,5,0"><Run Text="xx O /"/></TextBlock>
+            <TextBox x:Name="BoxSize" HorizontalAlignment="Left" Height="20" TextWrapping="NoWrap" VerticalAlignment="Top" Text="" Background="#FF484B53" Foreground="White" LostFocus="BoxSize_LostFocus" KeyUp="BoxSize_LostFocus" MinWidth="40"/>
+            <TextBlock x:Name="FinalSize" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFD1D1D1" Margin="5,0"><Run Text=" "/><Run Text="/ xx O"/></TextBlock>
+            <TextBlock x:Name="FinalSizeCheck" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="20" Foreground="#FF23FF00" TextAlignment="Center" Margin="0" Visibility="Hidden"/>
+        </StackPanel>
+        <TextBlock x:Name="TextInternetSpeed" Height="20" Margin="10,70.5,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"><Run Text="I"/><Run Text="nternet speed:"/></TextBlock>
+        <StackPanel x:Name="SpeedPanel" Height="20" Margin="10,90.5,10,0" VerticalAlignment="Top" Orientation="Horizontal">
+            <TextBox x:Name="BoxInternetSpeed" HorizontalAlignment="Left" Height="20" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Background="#FF484B53" Foreground="White" LostFocus="BoxInternetSpeed_LostFocus" KeyUp="BoxInternetSpeed_LostFocus" MinWidth="40" Margin="0"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFD1D1D1" Margin="5,0" Text="Mo/s"/>
+            <TextBlock x:Name="InternetSpeedCheck" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="20" Foreground="#FF23FF00" TextAlignment="Center" Visibility="Hidden" Margin="0"/>
+        </StackPanel>
+        <TextBlock x:Name="TextSpeed" Height="18" Margin="10,92,10,0" TextWrapping="Wrap" Text="Calculating..." VerticalAlignment="Top" Foreground="#FFD1D1D1" d:IsHidden="True"/>
+        <TextBlock x:Name="TextProgress" Height="20" Margin="0,0,0,30" TextWrapping="NoWrap" Text="0%" VerticalAlignment="Bottom" Width="50" TextAlignment="Center" Foreground="White" TextDecorations="{x:Null}"/>
+        <ProgressBar x:Name="ProgressBar1" Height="20" Margin="10,0,10,10" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</Page>
